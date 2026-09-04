@@ -1,0 +1,19 @@
+# Fill credentials via .env / environment variables (do not hard-code secrets).
+llm_config:
+  model: "gemini-3-flash-preview"
+  api_key: "${DOCFORMFLOW_API_KEY}"
+  base_url: "${DOCFORMFLOW_BASE_URL}"
+  params:
+    temperature: 1.0
+    top_p: 0.8
+    seed: 1234
+    max_tokens: 20480
+    reasoning_effort: "none"
+
+app_agent_config:
+  page_agent_config: "experiment/configs/gemini-3-flash/page_agent.yaml"
+  text_agent_config: "experiment/configs/gemini-3-flash/text_agent.yaml"
+  table_agent_config: "experiment/configs/gemini-3-flash/table_agent.yaml"
+  image_agent_config: "experiment/configs/gemini-3-flash/image_agent.yaml"
+
+prompt_config: "config/prompt_config/host_prompt.yaml"

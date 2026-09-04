@@ -1,0 +1,40 @@
+# Fill in your LLM credentials, or set environment variables (see README).
+llm_config:
+  model: "${DOCFORMFLOW_MODEL}"
+  api_key: "${DOCFORMFLOW_API_KEY}"
+  base_url: "${DOCFORMFLOW_BASE_URL}"
+  params:
+    temperature: 0.7
+    top_p: 0.8
+    presence_penalty: 1.5
+    seed: 1234
+    max_tokens: 9128
+
+vllm_config:
+  model: "${DOCFORMFLOW_VLLM_MODEL}"
+  api_key: "${DOCFORMFLOW_VLLM_API_KEY}"
+  base_url: "${DOCFORMFLOW_VLLM_BASE_URL}"
+  params:
+    temperature: 0.7
+    top_p: 0.8
+    presence_penalty: 1.5
+    seed: 1234
+    max_tokens: 9128
+
+understand_config:
+  is_vision: False
+  after: 1
+  before: 1
+
+refine_config:
+  max_retry: 3
+  if_retry: True
+  max_check: 3
+  if_check: True
+
+tools_config:
+  image_tool:
+    tool_path: "/tool/modify/image_tool"
+    tool_name: "ImageTools"
+
+prompt_config: "config/prompt_config/image_prompt.yaml"

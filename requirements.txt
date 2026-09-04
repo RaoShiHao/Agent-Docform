@@ -1,0 +1,7 @@
+openai>=1.40.0
+PyYAML>=6.0
+pywin32>=306
+pdf2image>=1.17.0
+pypandoc>=1.13
+# Optional: only needed when using Zhipu GLM models (model name contains "glm")
+# zai

@@ -1,0 +1,14 @@
+# Fill in your LLM credentials, or set environment variables:
+#   DOCFORMFLOW_API_KEY, DOCFORMFLOW_BASE_URL, DOCFORMFLOW_MODEL
+llm_config:
+  model: "${DOCFORMFLOW_MODEL}"
+  api_key: "${DOCFORMFLOW_API_KEY}"
+  base_url: "${DOCFORMFLOW_BASE_URL}"
+  params:
+    temperature: 0.7
+    top_p: 0.8
+    presence_penalty: 1.5
+    seed: 1234
+    max_tokens: 20480
+
+prompt_config: "config/prompt_config/host_prompt.yaml"

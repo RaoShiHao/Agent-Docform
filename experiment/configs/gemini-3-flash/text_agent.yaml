@@ -1,0 +1,38 @@
+# Fill credentials via .env / environment variables (do not hard-code secrets).
+llm_config:
+  model: "gemini-3-flash-preview"
+  api_key: "${DOCFORMFLOW_API_KEY}"
+  base_url: "${DOCFORMFLOW_BASE_URL}"
+  params:
+    temperature: 1.0
+    top_p: 0.8
+    seed: 1234
+    max_tokens: 9128
+    reasoning_effort: "none"
+
+vllm_config:
+  model: "gemini-3-flash-preview"
+  api_key: "${DOCFORMFLOW_VLLM_API_KEY}"
+  base_url: "${DOCFORMFLOW_VLLM_BASE_URL}"
+  params:
+    temperature: 0.7
+    top_p: 0.8
+    seed: 1234
+    max_tokens: 9128
+    reasoning_effort: "none"
+
+understand_config:
+  is_vision: True
+
+refine_config:
+  max_retry: 3
+  if_retry: True
+  max_check: 3
+  if_check: True
+
+tools_config:
+  text_tool:
+    tool_path: "/tool/modify/text_tool"
+    tool_name: "TextTools"
+
+prompt_config: "config/prompt_config/text_prompt.yaml"
