@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DocFormFlow
 
 **DocFormFlow** is a Windows-oriented document formatting workflow: given a natural-language formatting requirement and a `.docx` file, it uses an LLM plus Word COM tools to produce a revised document.
@@ -177,3 +178,6 @@ DocFormFlow/
 ## License
 
 Add a license file appropriate for your release before publishing.
+=======
+# Agent-Docform
+>>>>>>> 40bb6ba479ea11660bdc28ed20d46c0b89feb4ed
